@@ -23,6 +23,7 @@ import {
   ContactMail,
 } from '@material-ui/icons';
 import avatar from '../avatar.png';
+import Footer from './Footer';
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -100,27 +101,26 @@ const Navbar = () => {
   );
 
   return (
-    <>
-      <Box component="nav">
-        <AppBar position="static" style={{ background: '#222' }}>
-          <Toolbar>
-            <IconButton onClick={toggleSlider('right', true)}>
-              <ArrowBack style={{ color: 'tomato' }}></ArrowBack>
-            </IconButton>
-            <Typography variant="h5" style={{ color: 'tan' }}>
-              Portfolio
-            </Typography>
-            <MobilRightMenuSlider
-              anchor="right"
-              open={state.right}
-              onClose={toggleSlider('right', false)}
-            >
-              {sideList('right')}
-            </MobilRightMenuSlider>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </>
+    <Box component="nav">
+      <AppBar position="static" style={{ background: '#222' }}>
+        <Toolbar>
+          <IconButton onClick={toggleSlider('right', true)}>
+            <ArrowBack style={{ color: 'tomato' }}></ArrowBack>
+          </IconButton>
+          <Typography variant="h5" style={{ color: 'tan' }}>
+            Portfolio
+          </Typography>
+          <MobilRightMenuSlider
+            anchor="right"
+            open={state.right}
+            onClose={toggleSlider('right', false)}
+          >
+            {sideList('right')}
+            <Footer />
+          </MobilRightMenuSlider>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 
