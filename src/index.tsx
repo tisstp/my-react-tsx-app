@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import App from './containers/App/App';
+import { Routing } from './containers/Routes/Routing';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Router>
     <App />
+    <Routing />
   </Router>,
   document.getElementById('root')
 );

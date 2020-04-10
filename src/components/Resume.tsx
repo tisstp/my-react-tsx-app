@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Box } from '@material-ui/core';
-import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -107,7 +106,6 @@ const Resume = () => {
   const classes = useStyles();
   return (
     <>
-      <Navbar />
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           working experience

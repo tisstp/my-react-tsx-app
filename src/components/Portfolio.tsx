@@ -11,7 +11,6 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
-import Navbar from './Navbar';
 import project1 from 'src/assets/images/html-css-javascript-lg.jpg';
 import project2 from 'src/assets/images/javascript-fullstack.jpg';
 import project3 from 'src/assets/images/react-redux.jpg';
@@ -32,7 +31,6 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <Box className={classes.mainContainer}>
-      <Navbar />
       <Grid container justify="center">
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>
