@@ -11,10 +11,10 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
-import project1 from '../assets/images/html-css-javascript-lg.jpg';
-import project2 from '../assets/images/javascript-fullstack.jpg';
-import project3 from '../assets/images/react-redux.jpg';
-import project4 from '../assets/images/mern-stack.jpg';
+import project1 from '../../assets/images/html-css-javascript-lg.jpg';
+import project2 from '../../assets/images/javascript-fullstack.jpg';
+import project3 from '../../assets/images/react-redux.jpg';
+import project4 from '../../assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {

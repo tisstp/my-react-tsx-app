@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Avatar, Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Typed from 'react-typed';
-import avatar from '../assets/images/avatar.png';
+import avatar from '../../assets/images/avatar.png';
 
 // CSS Styles
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Home = () => {
   const classes = useStyles();
   return (
     <Box className={classes.typedContainer}>
@@ -52,4 +52,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Home;
