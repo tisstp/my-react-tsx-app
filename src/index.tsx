@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './containers/App/App';
-import { Routing } from './containers/Routes/Routing';
+import App from './containers/app/App';
+import { Routing } from './containers/routes/Routing';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
