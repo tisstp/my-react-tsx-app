@@ -12,10 +12,10 @@ import {
   Typography,
 } from '@material-ui/core';
 import Navbar from './Navbar';
-import project1 from '../images/html-css-javascript-lg.jpg';
-import project2 from '../images/javascript-fullstack.jpg';
-import project3 from '../images/react-redux.jpg';
-import project4 from '../images/mern-stack.jpg';
+import project1 from 'src/assets/images/html-css-javascript-lg.jpg';
+import project2 from 'src/assets/images/javascript-fullstack.jpg';
+import project3 from 'src/assets/images/react-redux.jpg';
+import project4 from 'src/assets/images/mern-stack.jpg';
 
 const useStyles = makeStyles({
   mainContainer: {
