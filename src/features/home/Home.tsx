@@ -1,8 +1,10 @@
 import React from 'react';
 import { Typography, Avatar, Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
 import Typed from 'react-typed';
 import avatar from '../../assets/images/avatar.png';
+import { StoreState } from '../../store/entities';
 
 // CSS Styles
 const useStyles = makeStyles((theme) => ({
@@ -29,20 +31,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const Home = (props: any) => {
   const classes = useStyles();
+  const { title, subtitle } = props;
+
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Russel Crowe" />
+        <Avatar className={classes.avatar} src={avatar} alt={title} />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={['Russel Crowe']} typeSpeed={40} />
+        <Typed strings={[title]} typeSpeed={40} />
       </Typography>
       <br />
       <Typography className={classes.subtitle} variant="h5">
         <Typed
-          strings={['Web Design', 'Web Development', 'MERN Stack']}
+          strings={subtitle}
           typeSpeed={40}
           backSpeed={60}
           loop
@@ -52,4 +56,12 @@ const Home = () => {
   );
 };
 
-export default Home;
+// todo check value
+const mapStateToProps = (state: StoreState, ownProps: any) => {
+  console.log('mapStateToProps', state, ownProps);
+  return {
+    ...state.home
+  }
+};
+
+export default connect(mapStateToProps)(Home);
