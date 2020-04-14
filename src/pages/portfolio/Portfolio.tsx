@@ -15,6 +15,7 @@ import project1 from '../../assets/images/html-css-javascript-lg.jpg';
 import project2 from '../../assets/images/javascript-fullstack.jpg';
 import project3 from '../../assets/images/react-redux.jpg';
 import project4 from '../../assets/images/mern-stack.jpg';
+import Navbar from '../../components/Navbar/Navbar';
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -31,6 +32,7 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <Box className={classes.mainContainer}>
+      <Navbar />
       <Grid container justify="center">
         {/* Project 1 */}
         <Grid item xs={12} sm={8} md={6}>

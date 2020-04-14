@@ -1,13 +1,13 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
-import Navbar from '../../features/sidebar/Navbar';
+import { Routing } from '../routes/Routing';
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Navbar />
+      <Routing />
     </>
   );
 }

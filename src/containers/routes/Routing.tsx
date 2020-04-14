@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Contacts from '../../features/contacts/Contacts';
-import Home from '../../features/home/Home';
-import Portfolio from '../../features/portfolio/Portfolio';
-import Resume from '../../features/resume/Resume';
+import Contacts from '../../pages/contacts/Contacts';
+import Home from '../../pages/home/Home';
+import Portfolio from '../../pages/portfolio/Portfolio';
+import Resume from '../../pages/resume/Resume';
 
 export const Routing = () => {
   return (

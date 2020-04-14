@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import Typed from 'react-typed';
 import avatar from '../../assets/images/avatar.png';
+import Navbar from '../../components/Navbar/Navbar';
 import { StoreState } from '../../store/entities';
 
 // CSS Styles
@@ -36,23 +37,26 @@ const Home = (props: any) => {
   const { title, subtitle } = props;
 
   return (
-    <Box className={classes.typedContainer}>
-      <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt={title} />
-      </Grid>
-      <Typography className={classes.title} variant="h4">
-        <Typed strings={[title]} typeSpeed={40} />
-      </Typography>
-      <br />
-      <Typography className={classes.subtitle} variant="h5">
-        <Typed
-          strings={subtitle}
-          typeSpeed={40}
-          backSpeed={60}
-          loop
-        />
-      </Typography>
-    </Box>
+    <>
+      <Navbar />
+      <Box className={classes.typedContainer}>
+        <Grid container justify="center">
+          <Avatar className={classes.avatar} src={avatar} alt={title} />
+        </Grid>
+        <Typography className={classes.title} variant="h4">
+          <Typed strings={[title]} typeSpeed={40} />
+        </Typography>
+        <br />
+        <Typography className={classes.subtitle} variant="h5">
+          <Typed
+            strings={subtitle}
+            typeSpeed={40}
+            backSpeed={60}
+            loop
+          />
+        </Typography>
+      </Box>
+    </>
   );
 };
 
