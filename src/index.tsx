@@ -1,17 +1,27 @@
 import React from 'react';
-import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';
+import { IntlProvider } from 'react-intl';
+import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom';
+
 import App from './containers/app/App';
 import * as serviceWorker from './serviceWorker';
 import configureAppStore from './store/configure-store';
+import { MessageFormatElement } from 'intl-messageformat-parser';
+import messages1 from './i18n/en-US.json'; // todo remove it.
 
-const store = configureAppStore();
+// todo move it.
+const messages: Record<string, string> | Record<string, MessageFormatElement[]> = {
+  app_title: 'App Title Test Intl'
+};
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={configureAppStore()}>
     <Router>
-      <App />
+      <IntlProvider locale="en-US" messages={messages}>
+        {console.log(messages1)}
+        <App />
+      </IntlProvider>
     </Router>
   </Provider>,
   document.getElementById('root')
