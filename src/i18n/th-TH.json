@@ -1,5 +1,15 @@
 {
   "app": {
     "title": "ทดสอบหัวเรื่องแอพ"
+  },
+  "page": {
+    "home": {
+      "title": "hello home TH",
+      "subtitle": "hi home TH"
+    },
+    "contacts": {
+      "title": "hello contacts TH",
+      "subtitle": "hi contacts TH"
+    }
   }
 }

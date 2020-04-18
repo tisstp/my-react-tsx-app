@@ -7,19 +7,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './containers/app/App';
 import * as serviceWorker from './serviceWorker';
 import configureAppStore from './store/configure-store';
-import { MessageFormatElement } from 'intl-messageformat-parser';
-import messages1 from './i18n/en-US.json'; // todo remove it.
-
-// todo move it.
-const messages: Record<string, string> | Record<string, MessageFormatElement[]> = {
-  app_title: 'App Title Test Intl'
-};
+import messages from './i18n/en-US.json';
+import { flattenMessages } from './helpers/internationalization';
 
 ReactDOM.render(
   <Provider store={configureAppStore()}>
     <Router>
-      <IntlProvider locale="en-US" messages={messages}>
-        {console.log(messages1)}
+      <IntlProvider locale="en-US" messages={flattenMessages(messages)}>
         <App />
       </IntlProvider>
     </Router>

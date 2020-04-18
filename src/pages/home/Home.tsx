@@ -6,6 +6,7 @@ import Typed from 'react-typed';
 import avatar from '../../assets/images/avatar.png';
 import Navbar from '../../components/Navbar/Navbar';
 import { StoreState } from '../../store/entities';
+import { FormattedMessage } from 'react-intl';
 
 // CSS Styles
 const useStyles = makeStyles((theme) => ({
@@ -55,6 +56,9 @@ const Home = (props: any) => {
             loop
           />
         </Typography>
+        <br/>
+        <FormattedMessage id="app.title" />
+        <br/>
       </Box>
     </>
   );
