@@ -1,0 +1,15 @@
+{
+  "app": {
+    "title": "App Title Test Intl."
+  },
+  "page": {
+    "home": {
+      "title": "hello home",
+      "subtitle": "hi home"
+    },
+    "contacts": {
+      "title": "hello contacts",
+      "subtitle": "hi contacts"
+    }
+  }
+}

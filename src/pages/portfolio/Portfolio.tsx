@@ -11,11 +11,11 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
-import Navbar from './Navbar';
-import project1 from '../images/html-css-javascript-lg.jpg';
-import project2 from '../images/javascript-fullstack.jpg';
-import project3 from '../images/react-redux.jpg';
-import project4 from '../images/mern-stack.jpg';
+import project1 from '../../assets/images/html-css-javascript-lg.jpg';
+import project2 from '../../assets/images/javascript-fullstack.jpg';
+import project3 from '../../assets/images/react-redux.jpg';
+import project4 from '../../assets/images/mern-stack.jpg';
+import Navbar from '../../components/Navbar/Navbar';
 
 const useStyles = makeStyles({
   mainContainer: {
